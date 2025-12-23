@@ -3,11 +3,11 @@ Lung Cancer Cytokine Analysis
 
 A literature-based exploratory analysis of cytokines in lung cancer progression and metastasis
 
-Overview
+# Overview
 
 This repository contains an exploratory, literature-derived analysis examining the role of cytokines in lung cancer progression, metastasis, and immune modulation. Using recent peer-reviewed studies, cytokine-related findings were structured into a curated dataset and analysed using R to identify recurring biological patterns and generate testable hypotheses relevant to cancer immunology.
 
-Research Questions
+# Research Questions
 
 The project addresses three core hypotheses:
 
@@ -20,14 +20,14 @@ Cytokines associated with lung cancer metastasis highlight key signalling pathwa
 Immune directionality
 Cytokines involved in lung cancer metastasis predominantly exhibit tumour-promoting or immunosuppressive effects rather than tumour-inhibitory roles.
 
-Data Source
+# Data Source
 Curated from recent (last ~2 years) peer-reviewed reviews and mechanistic studies
 Focused on cytokines, chemokines, and immunoregulatory signalling in lung cancer
 Data was manually extracted and structured using Google Sheets, then imported into R
 
-#This dataset is literature-derived and does not contain patient-level or clinical trial data.
+# This dataset is literature-derived and does not contain patient-level or clinical trial data.
 
-Methods
+# Methods
 Manual literature screening and annotation
 Classification of cytokines by:
 Disease context (progression vs metastasis)
@@ -60,7 +60,7 @@ Exploratory data analysis and visualisation in R (dplyr, ggplot2)
 
 
 
-Key Findings
+# Key Findings
 Cytokine signalling is consistently implicated in lung cancer progression, but evidence for early-stage biomarker dominance remains limited.
 Metastasis-associated cytokines show stronger recurrence and pathway enrichment, supporting their prioritisation for mechanistic and immunotherapeutic research.
 Metastatic contexts are characterised by a skew towards tumour-promoting and immunosuppressive cytokine activity.
@@ -85,17 +85,24 @@ Cytokine redundancy and context dependence are not fully captured
 │ └── fig_metastasis_directionality.png
 └── README.md
 
-Tools
-
+# Tools
 R (tidyverse)
 Google Sheets (data curation)
 ggplot2 (visualisation)
 
-Future Directions
+# Future Directions
 Expansion to include more primary studies and meta-analyses
 Integration with single-cell or bulk transcriptomic datasets
 Comparative analysis with immune checkpoint and T-cell signalling pathways
 Extension to other cancer types
+
+## References
+
+1. Mechanism of interleukin-6 cytokine family in bone metastasis of lung cancer and prospects for its application.  
+2. Therapeutic targeting of TGF-β in lung cancer.  
+3. The novel functions of chemokines in lung cancer progression.  
+4. The distinct roles of IL-37 and IL-38 in non-small cell lung carcinoma and their clinical implications.
+
 
 Author
 Bhashvi Singh
