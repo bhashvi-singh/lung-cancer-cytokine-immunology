@@ -51,13 +51,13 @@ Exploratory data analysis and visualisation in R (dplyr, ggplot2)
   ## Figures
 
  fig_progression_cytokines.png 
-  Distribution of cytokines reported in lung cancer progression-related contexts (exploratory).
+ Distribution of cytokines reported in lung cancer progression-related contexts (exploratory).
 
-  fig_metastasis_targets.png
-  Metastasis-associated cytokines prioritised as candidate targets for mechanistic and immunotherapeutic studies.
+ fig_metastasis_targets.png
+ Metastasis-associated cytokines prioritised as candidate targets for mechanistic and immunotherapeutic studies.
 
-  fig_metastasis_directionality.png 
-  Directionality of cytokine effects in lung cancer metastasis, highlighting immune suppression and tumour-promoting biases.
+ fig_metastasis_directionality.png 
+ Directionality of cytokine effects in lung cancer metastasis, highlighting immune suppression and tumour-promoting biases.
 
 
 
