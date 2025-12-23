@@ -36,6 +36,30 @@ Direction of effect (tumour-promoting, inhibitory, context-dependent)
 Cytokine group (pro-inflammatory, regulatory, chemokine)
 Exploratory data analysis and visualisation in R (dplyr, ggplot2)
 
+## Analysis Scripts
+
+  analysis_progression  
+  Identifies cytokines associated with lung cancer progression and evaluates their potential relevance as markers of early-stage disease.
+
+  analysis_metastasis_targets  
+  Analyses metastasis-associated cytokines and prioritises candidates based on recurrence and immunotherapeutic relevance.
+
+  analysis_directionality  
+  Examines the directionality of cytokine effects in metastatic lung cancer, focusing on tumour-promoting versus inhibitory roles.
+
+  ## Figures
+
+ fig_progression_cytokines.png 
+  Distribution of cytokines reported in lung cancer progression-related contexts (exploratory).
+
+  fig_metastasis_targets.png
+  Metastasis-associated cytokines prioritised as candidate targets for mechanistic and immunotherapeutic studies.
+
+  fig_metastasis_directionality.png 
+  Directionality of cytokine effects in lung cancer metastasis, highlighting immune suppression and tumour-promoting biases.
+
+
+
 Key Findings
 Cytokine signalling is consistently implicated in lung cancer progression, but evidence for early-stage biomarker dominance remains limited.
 Metastasis-associated cytokines show stronger recurrence and pathway enrichment, supporting their prioritisation for mechanistic and immunotherapeutic research.
