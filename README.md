@@ -37,6 +37,63 @@ Direction of effect (tumour-promoting, inhibitory, context-dependent)
 Cytokine group (pro-inflammatory, regulatory, chemokine)
 Exploratory data analysis and visualisation in R (dplyr, ggplot2)
 
+## Analysis Workflow
+
+###Cytokines associated with lung cancer progression
+
+Progression-associated cytokines were identified by filtering studies not explicitly linked to metastasis and counting recurring cytokines.
+
+```r
+progression_data <- cytokine_data %>%
+  filter(Metastasis_link == "Progression")
+
+progression_summary <- progression_data %>%
+  count(Cytokine, sort = TRUE)
+Full analysis: `scripts/analysis_progression.R`
+*Figure 1. Cytokines reported in lung cancer progression (exploratory)
+
+![Cytokines in progression](figures/fig_progression_cytokines.png)
+
+###Metastasis-associated cytokines and target prioritisation
+
+Metastasis-linked studies were used to identify cytokines recurrently implicated in lung cancer dissemination.
+
+```r
+metastasis_data <- cytokine_data %>%
+  filter(Metastasis_link == "Metastasis")
+
+metastasis_summary <- metastasis_data %>%
+  count(Cytokine, sort = TRUE)
+
+Then link the script:
+
+```md
+Full analysis: `scripts/analysis_metastasis_targets.R`
+*Figure 2. Metastasis-associated cytokines prioritised as candidate immunotherapeutic targets.
+
+![Metastasis targets](figures/fig_metastasis_targets.png)
+
+###Directionality of cytokine effects in metastasis
+
+Directionality of cytokine effects was assessed to evaluate immune balance in metastatic lung cancer.
+
+```r
+metastasis_direction <- metastasis_data %>%
+  count(Direction) %>%
+  mutate(proportion = n / sum(n))
+
+Script link:
+
+```md
+Full analysis: `scripts/analysis_directionality.R`
+*Figure 3. Directionality of cytokine effects in lung cancer metastasis.*
+
+![Directionality](figures/fig_metastasis_directionality.png)
+
+
+
+
+
 ## Analysis Scripts
 
   analysis_progression  
