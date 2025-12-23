@@ -25,7 +25,8 @@ Curated from recent (last ~2 years) peer-reviewed reviews and mechanistic studie
 Focused on cytokines, chemokines, and immunoregulatory signalling in lung cancer
 Data was manually extracted and structured using Google Sheets, then imported into R
 
-# This dataset is literature-derived and does not contain patient-level or clinical trial data.
+# Note
+This dataset is literature-derived and does not contain patient-level or clinical trial data.
 
 # Methods
 Manual literature screening and annotation
