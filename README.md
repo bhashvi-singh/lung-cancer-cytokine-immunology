@@ -62,10 +62,6 @@ progression_summary <- progression_data %>%
   count(Cytokine, sort = TRUE)
 Full analysis: scripts/analysis_progression.R
 
-Figure 1. Cytokines reported in lung cancer progression (exploratory).
-
-<img width="1074" height="888" alt="Figure 1 lung cancer analysis" src="https://github.com/user-attachments/assets/269c946a-ae73-429a-b014-17173439993d" />
-
 
 
 
@@ -81,10 +77,6 @@ metastasis_summary <- metastasis_data %>%
   count(Cytokine, sort = TRUE)
 Full analysis: scripts/analysis_metastasis_targets.R
 
-Figure 2. Metastasis-associated cytokines prioritised as candidate immunotherapeutic targets.
-
-
-<img width="1074" height="888" alt="Figure 2 lung cancer analysis" src="https://github.com/user-attachments/assets/dddf84d4-95ac-40a5-8c81-3f63482808b0" />
 
 
 
@@ -97,10 +89,6 @@ metastasis_direction <- metastasis_data %>%
   count(Direction) %>%
   mutate(proportion = n / sum(n))
 Full analysis: scripts/analysis_directionality.R
-
-Figure 3. Directionality of cytokine effects in lung cancer metastasis.
-
-<img width="1074" height="888" alt="Figure 3 lung cancer analysis" src="https://github.com/user-attachments/assets/05dc34f9-1572-4605-9802-a04eb218c8dd" />
 
 
 Key Findings
