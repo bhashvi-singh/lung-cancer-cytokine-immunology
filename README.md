@@ -54,58 +54,50 @@ This dataset is literature-derived and does not contain patient-level or clinica
 
 ### Cytokines associated with lung cancer progression
 
-Progression-associated cytokines were identified by filtering studies not explicitly linked to metastasis and counting recurring cytokines.
+## Cytokines associated with lung cancer progression
+
+Progression-associated cytokines were identified from non-metastatic study contexts.
 
 ```r
 progression_data <- cytokine_data %>%
-  filter(Metastasis_link == "Progression")
+  filter(Metastasis_link == "No")
 
 progression_summary <- progression_data %>%
   count(Cytokine, sort = TRUE)
+
 Full analysis: scripts/analysis_progression.R
 
 Figure 1. Cytokines reported in lung cancer progression (exploratory).
 
+<img width="1074" height="888" alt="Figure 1 lung cancer analysis" src="https://github.com/user-attachments/assets/eb28d45b-77dd-43b2-aa72-51d2284e0713" />
 
 
-Metastasis-associated cytokines and target prioritisation
-Metastasis-linked studies were used to identify cytokines recurrently implicated in lung cancer dissemination.
 
-r
-Copy code
 metastasis_data <- cytokine_data %>%
-  filter(Metastasis_link == "Metastasis")
+  filter(Metastasis_link == "Yes")
 
 metastasis_summary <- metastasis_data %>%
   count(Cytokine, sort = TRUE)
-Full analysis: scripts/analysis_metastasis_targets.R
 
-
-<img width="1074" height="888" alt="Figure 1 lung cancer analysis" src="https://github.com/user-attachments/assets/f804cc26-9588-4260-ac57-afe5443927ab" />
+Full analysis: scripts/analysis_progression.R
 
 
 Figure 2. Metastasis-associated cytokines prioritised as candidate immunotherapeutic targets.
 
+<img width="1074" height="888" alt="Figure 2 lung cancer analysis" src="https://github.com/user-attachments/assets/f5d3c887-1e76-4e99-8b7d-96d7e1fa2459" />
 
 
-Directionality of cytokine effects in metastasis
-Directionality of cytokine effects was assessed to evaluate immune balance in metastatic lung cancer.
-
-r
-Copy code
 metastasis_direction <- metastasis_data %>%
   count(Direction) %>%
   mutate(proportion = n / sum(n))
+
 Full analysis: scripts/analysis_directionality.R
-
-
-<img width="1074" height="888" alt="Figure 2 TB analysis" src="https://github.com/user-attachments/assets/f74b4c67-660c-481f-8941-afdb44029714" />
-
 
 Figure 3. Directionality of cytokine effects in lung cancer metastasis.
 
 
-<img width="1074" height="888" alt="Figure 3 lung cancer analysis" src="https://github.com/user-attachments/assets/20b38541-3653-4fd8-8614-4bf17450a47d" />
+<img width="1074" height="888" alt="Figure 3 lung cancer analysis" src="https://github.com/user-attachments/assets/ade37079-d1d3-47b9-91e8-6c47943dfa37" />
+
 
 
 
