@@ -78,6 +78,8 @@ metastasis_data <- cytokine_data %>%
 metastasis_summary <- metastasis_data %>%
   count(Cytokine, sort = TRUE)
 Full analysis: scripts/analysis_metastasis_targets.R
+<img width="1074" height="888" alt="Figure 1 lung cancer analysis" src="https://github.com/user-attachments/assets/f804cc26-9588-4260-ac57-afe5443927ab" />
+
 
 Figure 2. Metastasis-associated cytokines prioritised as candidate immunotherapeutic targets.
 
@@ -92,8 +94,12 @@ metastasis_direction <- metastasis_data %>%
   count(Direction) %>%
   mutate(proportion = n / sum(n))
 Full analysis: scripts/analysis_directionality.R
+<img width="1074" height="888" alt="Figure 2 TB analysis" src="https://github.com/user-attachments/assets/f74b4c67-660c-481f-8941-afdb44029714" />
+
 
 Figure 3. Directionality of cytokine effects in lung cancer metastasis.
+
+<img width="1074" height="888" alt="Figure 3 lung cancer analysis" src="https://github.com/user-attachments/assets/20b38541-3653-4fd8-8614-4bf17450a47d" />
 
 
 
